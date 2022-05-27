@@ -1,0 +1,314 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+%\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
+                                                          % if you need a4paper
+\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{apacite}
+\usepackage{siunitx}
+\usepackage{authblk}
+
+\makeatletter
+\newcommand*\titleheader[1]{\gdef\@titleheader{#1}}
+\AtBeginDocument{%
+  \let\st@red@title\@title
+  \def\@title{%
+    \bgroup\normalfont\large\centering\@titleheader\par\egroup
+    \vskip1.5em\st@red@title}
+}
+\makeatother
+
+
+\titleheader{GEO441 Remote Sensing Seminar, spring semester 2022}
+
+\title{\huge \bf
+How to write my seminar report
+}
+
+%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
+%         \thanks{*Use the $\backslash$thanks command to put information here}\\
+%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
+%         University of Twente\\
+%         7500 AE Enschede, The Netherlands\\
+%         {\tt\small h.kwakernaak@autsubmit.com}}
+%         \hspace*{ 0.5 in}
+%         \parbox{3 in}{ \centering Pradeep Misra**
+%         \thanks{**The footnote marks may be inserted manually}\\
+%        Department of Electrical Engineering \\
+%         Wright State University\\
+%         Dayton, OH 45435, USA\\
+%         {\tt\small pmisra@cs.wright.edu}}
+%}
+
+
+\author[ ]{name sirname}
+\author[ ]{name sirname}
+\author[ ]{name sirname}
+\affil[ ]{\textit{Remote Sensing Laboratories, Department of Geography, University of Zurich}}
+
+\begin{document}
+\pagenumbering{arabic}
+
+
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+The abstract should summarize, in 50 to 300 words, the problem, the method, the results, and the conclusions. The title is the simplest statement about the content of your article. In contrast, the abstract allows you to elaborate on each major section of the article. The abstract should give sufficient detail so that the reader can decide whether or not to read the whole article. Together, the title and the abstract should be able to stand on their own, as they are processed further by abstracting services. For this reason it is advisable not to include references to figures or tables, or citation of the reference in the abstract. Many authors write the abstract last so that it accurately reflects the content of the article.
+
+The abstract tells prospective readers what you did and what the important findings in your research were. Together with the title, it's the advertisement of your article. Make it interesting and easily understood without reading the whole article. Avoid using jargon, uncommon abbreviations and references. You must be accurate, using the words that convey the precise meaning of your research. The abstract provides a short description of the perspective and purpose of your paper. It gives key results but minimizes experimental details. It is very important to remind that the abstract offers a short description of the interpretation/conclusion in the last sentence. A clear abstract will strongly influence whether or not your work is further considered. However, the abstracts must be keep as brief as possible. Just check the 'Guide for authors' of the journal, but normally they have less than 250 words.
+
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUCTION}
+
+The introduction should be brief, ideally one to two paragraphs long. It should clearly state the problem being investigated, the background that explains the problem, and the reasons for conducting the research. You should summarize relevant research to provide context, state how your work differs from published work and importantly what questions you are answering. Explain what findings of others, if any, you are challenging or extending. Briefly describe your experiment, hypothesis(es), research question(s), and general experimental design or method. Lengthy interpretations should be left until the Discussion \cite{atwoodetal2015}.
+
+This is your opportunity to convince readers that you clearly know why your work is useful. A good introduction should answer the following questions:
+\begin{itemize}
+\item What is the problem to be solved? Are there any existing solutions? Which is the best?
+\item What is its main limitation? 
+\item What do you hope to achieve?
+\end{itemize}
+Editors like to see that you have provided a perspective consistent with the nature of the journal. You need to introduce the main scientific publications on which your work is based, citing a couple of original and important works, including recent review articles.
+However, editors hate improper citations of too many references irrelevant to the work, or inappropriate judgments on your own achievements. They will think you have no sense of purpose.
+Here are some additional tips for the introduction:
+Never use more words than necessary (be concise and to-the-point). Don't make this section into a history lesson. Long introductions put readers off.
+We all know that you are keen to present your new data. But do not forget that you need to give the whole picture at first.
+The introduction must be organized from the global to the particular point of view, guiding the readers to your objectives when writing this paper.
+State the purpose of the paper and research strategy adopted to answer the question, but do not mix introduction with results, discussion and conclusion. Always keep them separate to ensure that the manuscript flows logically from one section to the next.
+Hypothesis and objectives must be clearly remarked at the end of the introduction. Expressions such as "novel," "first time," "first ever," and "paradigm-changing" are not preferred. Use them sparingly.
+
+\section{STUDY SITE}
+
+Our study site (Figure \ref{fig:studysite}) is located at \ang{0}N \ang{0}E  
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{figures/Study-site.png}
+\caption{Overview of the study site}
+\label{fig:studysite}
+\end{figure}
+
+\section{MATERIAL AND METHODS}
+
+ The key purpose of this section is to provide the reader enough details so they can replicate your research. Explain how you studied the problem, identify the procedures you followed, and order these chronologically where possible. If your methods are new, they will need to be explained in detail; otherwise, name the method and cite the previously published work, unless you have modified the method, in which case refer to the original work and include the amendments. Identify the equipment and describe materials used and specify the source if there is variation in quality of materials. Include the frequency of observations, what types of data were recorded. Be precise in describing measurements and include errors of measurement. Name any statistical tests used so that your numerical results can be validated. It is advisable to use the past tense, and avoid using the first person, though this will vary from journal to journal.
+
+\subsection{RADAR imagery}
+
+... 
+
+
+\subsection{Optical imagery}
+
+... was calculated with equation \ref{eq:ndwi}...
+
+\begin{equation}
+\label{eq:ndwi}
+MNDWI = \frac{\rho_{Green}-\rho_{SWIR}}{\rho_{Green}+\rho_{SWIR}}
+\end{equation}
+
+ 
+\begin{equation}
+\label{eq:lakedepth}
+z = 29.730 e^{(-0.086 L)}
+\end{equation}
+
+\subsection{Weather station data}
+
+This section responds to the question of how the problem was studied. If your paper is proposing a new method, you need to include detailed information so a knowledgeable reader can reproduce the experiment.
+However, do not repeat the details of established methods; use References and Supporting Materials to indicate the previously published procedures. Broad summaries or key references are sufficient.
+Reviewers will criticize incomplete or incorrect methods descriptions and may recommend rejection, because this section is critical in the process of reproducing your investigation. In this way, all chemicals must be identified. Do not use proprietary, unidentifiable compounds.
+To this end, it's important to use standard systems for numbers and nomenclature. For example:
+Present proper control experiments and statistics used, again to make the experiment of investigation repeatable.
+List the methods in the same order they will appear in the Results section, in the logical order in which you did the research:
+\begin{enumerate}
+\item Description of the site
+\item Description of the surveys or experiments done, giving information on dates, etc.
+\item Description of the laboratory methods, including separation or treatment of samples,
+analytical methods, following the order of waters, sediments and biomonitors. If you have worked with different biodiversity components start from the simplest (i.e. microbes) to the more complex (i.e. mammals)
+\item Description of the statistical methods used (including confidence levels, etc.)
+\end{enumerate}
+In this section, avoid adding comments, results, and discussion, which is a common error.
+
+
+
+
+\section{RESULTS}
+
+\subsection{subsection A}
+
+In this section you objectively present your findings, and explain in words what was found. This is where you show that your new results are contributing to the body of scientific knowledge, so it is important to be clear and lay them out in a logical sequence. Raw data are rarely included in a scientific article; instead the data are analyzed and presented in the form of figures (graphs), tables, and/or descriptions of observations. It is important to clearly identify for the reader any significant trends. The results section should follow a logical sequence based on the table and figures that best presents the findings that answer the question or hypothesis being investigated. Tables and figures are assigned numbers separately, and should be in the sequence that you refer to them in the text. Figures should have a brief description (a legend), providing the reader sufficient information to know how the data were produced. It is important not to interpret your results - this should be done in the Discussion section.
+
+
+\subsection{subsection B}
+
+This section responds to the question "What have you found?" Hence, only representative results from your research should be presented. The results should be essential for discussion.
+Statistical rules
+Indicate the statistical tests used with all relevant parameters: e.g., mean and standard deviation (SD): 44\% (±3); median and interpercentile range: 7 years (4.5 to 9.5 years).
+Use mean and standard deviation to report normally distributed data.
+Use median and interpercentile range to report skewed data.
+For numbers, use two significant digits unless more precision is necessary (2.08, not 2.07856444).
+Never use percentages for very small samples e.g., "one out of two" should not be replaced by 50\%.
+However, remember that most journals offer the possibility of adding Supporting Materials, so use them freely for data of secondary importance. In this way, do not attempt to "hide" data in the hope of saving it for a later paper. You may lose evidence to reinforce your conclusion. If data are too abundant, you can use those supplementary materials.
+Use sub-headings to keep results of the same type together, which is easier to review and read. Number these sub-sections for the convenience of internal cross-referencing, but always taking into account the publisher's Guide for Authors.
+For the data, decide on a logical order that tells a clear story and makes it and easy to understand. Generally, this will be in the same order as presented in the methods section.
+An important issue is that you must not include references in this section; you are presenting your results, so you cannot refer to others here. If you refer to others, is because you are discussing your results, and this must be included in the Discussion section.
+
+
+
+
+\section{DISCUSSION}
+
+\subsection{subsection A}
+
+In this section you describe what your results mean, specifically in the context of what was already known about the subject of the investigation. You should link back to the introduction by way of the question(s) or hypotheses posed. You should indicate how the results relate to expectations and to the literature previously cited, whether they support or contradict previous theories. Most significantly, the discussion should explain how the research has moved the body of scientific knowledge forward. It is important not to extend your conclusions beyond what is directly supported by your results, so avoid undue speculation. It is advisable to suggest practical applications of your results, and outline what would be the next steps in your study.
+
+\subsection{subsection B}
+Here you must respond to what the results mean. Probably it is the easiest section to write, but the hardest section to get right. This is because it is the most important section of your article. Here you get the chance to sell your data. Take into account that a huge numbers of manuscripts are rejected because the Discussion is weak.
+You need to make the Discussion corresponding to the Results, but do not reiterate the results. Here you need to compare the published results by your colleagues with yours (using some of the references included in the Introduction). Never ignore work in disagreement with yours, in turn, you must confront it and convince the reader that you are correct or better.
+Take into account the following tips:
+\begin{enumerate}
+\item Avoid statements that go beyond what the results can support.
+\item Avoid unspecific expressions such as "higher temperature", "at a lower rate", "highly significant". Quantitative descriptions are always preferred (\ang{35}C, 0.5\%, p$<$0.001, -7 $dB$ respectively).
+\item Avoid sudden introduction of new terms or ideas;you must present everything in the introduction, to be confronted with your results here.
+\item Speculations on possible interpretations are allowed, but these should be rooted in fact, rather than imagination. 
+\end{enumerate}
+To achieve good interpretations think about:
+How do these results relate to the original question or objectives outlined in the Introduction section?
+Do the data support your hypothesis?
+Are your results consistent with what other investigators have reported? Discuss weaknesses and discrepancies. If your results were unexpected, try to explain why
+Is there another way to interpret your results?
+What further research would be necessary to answer the questions raised by your results?
+Explain what is new without exaggerating
+5. Revision of Results and Discussion is not just paper work.You may do further experiments, derivations, or simulations. Sometimes you cannot clarify your idea in words because some critical items have not been studied substantially.
+
+
+
+\section{CONCLUSIONS}
+This section shows how the work advances the field from the present state of knowledge. In some journals, it's a separate section; in others, it's the last paragraph of the Discussion section. Whatever the case, without a clear conclusion section, reviewers and readers will find it difficult to judge your work and whether it merits publication in the journal.
+A common error in this section is repeating the abstract, or just listing experimental results. Trivial statements of your results are unacceptable in this section.
+You should provide a clear scientific justification for your work in this section, and indicate uses and extensions if appropriate. Moreover, you can suggest future experiments and point out those that are underway.
+You can propose present global and specific conclusions, in relation to the objectives included in the introduction. 
+
+   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. It shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % This command does not take effect until the next page
+                                  % so it should come on the page before the last. Make
+                                  % sure that you do not shorten the textheight too much.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \pagebreak
+
+\section*{ACKNOWLEDGMENT}
+
+This section should be brief and include the names of individuals who have assisted with your study, including, contributors, reviewers, suppliers who may have provided materials free of charge, etc. Authors should also disclose in their article any financial or other substantive conflict of interest that might be construed to influence the results or interpretation of their article.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\nocite{*}
+\bibliographystyle{apacite}
+\bibliography{literature}
+
+
+
+
+
+\newpage
+
+\section{\LaTeX{} code examples and formatting tips}
+Hello, here's a citation \cite{atwoodetal2015}. References are stored in a Bibtex file. Google Scholar and IEEExplore allow you to download citations of papers in Bibtex format from their search engine. Some people use JabRef (\url{http://www.jabref.org}) to manage their database of references.
+
+This is an inline equation $\Gamma(t)=K_i e^{\sin^2(\omega_t)}$. The first paragraph appears without indent but the following ones will have an indentation.
+
+This is an actual named equation:
+\begin{equation}
+v(x)=\frac{1}{2}\sin(2 \omega t + \phi) e^{-j s t}
+\label{eq:cacona}
+\end{equation}
+\noindent where $\omega$ is the angular speed. Notice that symbols liks $\omega$ should be written in italics whereas measurement units such as V for Volts appear as normal text. This paragraph didn't have an indentation because the first sentence was linked to the definition of equation (\ref{eq:cacona}). 
+
+The characteristic parameters of the system are sumarised in Table~\ref{tab:tab1}. A figure is shown Fig~\ref{fig:felix}, we don't necessarily know if this figure will appear below, above or elsewhere; therefore, the text should never refer to the figure with sentences such as {\it "As shown here:"}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.3\linewidth]{figures/Felix_the_cat.pdf}
+\caption{Felix the Cat}
+\label{fig:felix}
+\end{figure}
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lll}
+		Parameter & Value & Units\\
+		\hline
+		$P$ & 1 & kW \\
+		$Q$ & 0 & kVAr\\
+	    \hline
+	\end{tabular}
+	\caption{Characteristic parameters of the system}
+	\label{tab:tab1}
+\end{table}
+
+\begin{samepage}
+Sometimes, the symbols in an equation are defined as follows\footnote{Some authors like to define their symbols this way.}:
+\begin{equation}
+	V(t)=A \sin(\omega t+\theta_0)
+\end{equation}
+\begin{tabular}{lll}
+	where & $V$ & is a voltage waveform,\\
+	& $A$ & is the amplitude of the voltage,\\
+	& $\omega$ & is the angular frequency,\\
+	& $t$ & is the time.
+\end{tabular}
+\end{samepage}
+
+
+
+
+\end{document}
+
